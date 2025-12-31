@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netis Router</title>
+<style>
+	
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	body {
+		background: rgb(240 240 240);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	header {
+		width: 100%;
+		background-color: #409EFF;
+		color: white;
+		padding: 10px 5px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;		
+	}
+	
+	header .logo {
+		display: flex;
+		align-items: center;
+	}
+	
+	header .logo h3 {
+		margin-left: 8px;
+		letter-spacing: 1px;
+		font-size: 1.4em;
+	}
+		
+	header .logo .copyright {
+		margin: 0.5px;
+	}
+	
+	header .logo .sp {
+		margin: 0 10px;
+	}
+	
+	header .toggle {
+		padding: 5px;
+		border: 2px solid white;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		border-radius: 5px;
+	}
+	
+	header .toggle span {
+		margin: 2.5px 4px;
+		width: 20px;
+		border: 1.5px solid white;
+		border-radius: 5px;
+	}
+	
+	.option {
+		width: 100%;
+		color: black;
+		font-size: 14px;
+		padding: 10px;
+		background: #fff;
+	}
+	.option span {
+		color: black;
+		font-size: 14px;
+		margin: 0 10px;
+	}
+	
+	.container {
+		margin-top: 20px;
+		background: #fff;
+		border-radius: 10px;
+		width: 90%;
+	}
+	
+	.choice {
+		display: flex;
+	}
+	
+	.choice div {
+		font-size: 12px;
+		padding: 16px;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.choice div:nth-child(1) {
+		border-bottom: 2px solid #409EFF;
+	}
+	
+	.choice div:nth-child(2) {
+		color: rgb(140 140 140);
+	}
+	
+	.list-cont {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.total {
+		width: 85%;
+		margin-top: 30px;
+		padding: 10px 20px;
+		display: flex;
+		background: #EBF5FF;
+		font-size: 14px;
+	}
+	
+	.total span {
+		margin-left: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 12px;
+		font-weight: 500;
+		color: #fff;
+		background: #F3C438;
+		height: 20px;
+		width: 20px;
+		border-radius: 100px;
+	}
+	
+	.device {
+		padding: 20px 10px;
+		width: 85%;
+	}
+	
+	.sec-dev {
+		background: #F5F5F5;
+		padding: 30px 10px;
+	}
+	
+	.device .name {
+		color: rgb(100 100 100);
+	}
+	
+	.device .det {
+		font-size: 12px;
+		color: rgb(100 100 100);
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0;
+	}
+	
+	.device .control {
+		margin-top: 15px;
+	}
+	
+	.device .control span {
+		border-radius: 5px;
+		font-size: 10px;
+		color: #fff;
+		padding: 3px;
+	}
+	
+	.device .control span:nth-child(1) {
+		background: #409EFF;
+		margin-right: 10px;
+	}
+	
+	.device .control span:nth-child(2) {
+		background: #808080;
+	}
+
+</style>
+</head>
+<body>
+	<header>
+		<div class="logo">
+		<h3 onclick="window.open('http://192.168.2.1/login.html', '_blank')">Netis</h3><sup class="copyright">©</sup>
+		<span class="sp"> | </span>
+		<span>WF2409E</span>
+		</div>
+		<div class="toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		<div>		
+	</header>
+	
+	<div class="option">Home  <span>>></span> Networking Device</div>
+	
+	<div class="container">
+		<div class="choice">
+			<div>List of Internet hosts</div>
+			<div>device blacklist</div>
+		</div>
+		<div class="list-cont">
+			<div class="total">
+				<p>My computer and mobile phone</p><span>3</span>
+			</div>
+			
+			<div class="device">
+				<h4 class="name">android-5b19848fa2f2ad61</h4>
+				<div class="ip det"><span>IP</span><span>192.168.2.103</span></div>
+				<div class="mac det"><span>MAC</span><span>44:04:44:c2:56:cc</span></div>
+				<div class="control"><span>Speed limit</span><span>Blacklist</span></div>
+			</div>
+			
+			<div class="device sec-dev">
+				<h4 class="name">Madinas-Galaxy-M10</h4>
+				<div class="ip det"><span>IP</span><span>192.168.2.100</span></div>
+				<div class="mac det"><span>MAC</span><span>ea:0c:4d:3e:89:6f</span></div>
+				<div class="control"><span>Speed limit</span><span>Blacklist</span></div>
+			</div>
+			
+			<div class="device">
+				<h4 class="name">Unnamed device</h4>
+				<div class="ip det"><span>IP</span><span>192.168.2.101</span></div>
+				<div class="mac det"><span>MAC</span><span>ce:3d:a4:45:9a:6d</span></div>
+				<div class="control"><span>Speed limit</span><span>Blacklist</span></div>
+			</div>
+					
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
